@@ -615,7 +615,7 @@ export default function NothingToSeeHere() {
   const [currentAmbient, setCurrentAmbient] = useState(null);
 
   useEffect(() => {
-    if (currentAmbient) return;
+    if (currentAmbient || !AMBIENT_IMAGE_SOURCES.length) return;
     const queue = getShuffledAmbientQueue();
     const [firstSrc, ...rest] = queue;
     setAmbientQueue(rest);
@@ -623,7 +623,7 @@ export default function NothingToSeeHere() {
   }, [currentAmbient]);
 
   useEffect(() => {
-    if (!currentAmbient) return;
+    if (!currentAmbient || !AMBIENT_IMAGE_SOURCES.length) return;
     const durationMs = Math.round(parseFloat(currentAmbient.duration) * 1000) + 300;
     const timer = setTimeout(() => {
       setAmbientQueue((prevQueue) => {
