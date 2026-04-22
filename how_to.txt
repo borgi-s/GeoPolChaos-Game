@@ -1,0 +1,14 @@
+VITE REACT QUICK START GUIDE (WINDOWS)
+
+1. Open PowerShell
+
+2. Navigate to your project folder:
+   cd C:\Users\borgi\my-app
+
+3. Start the development server:
+   npm run dev
+
+4. Open the link shown in the terminal, usually:
+   http://localhost:5173/
+
+DONE
